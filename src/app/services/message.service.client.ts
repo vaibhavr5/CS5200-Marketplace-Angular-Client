@@ -1,6 +1,6 @@
 export class MessageServiceClient {
   createMessage(message_details) {
-    return fetch('http://localhost:4000/api/message', {
+    return fetch(' https://boston-marketplace-server.herokuapp.com/api/message', {
       body: JSON.stringify(message_details),
       credentials: 'include', // include, same-origin, *omit
       method: 'post',
@@ -13,7 +13,7 @@ export class MessageServiceClient {
   findMessagesForUser()
   {
     console.log("In service to server");
-    const url = 'http://localhost:4000/api/msg';
+    const url = ' https://boston-marketplace-server.herokuapp.com/api/msg';
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
@@ -23,7 +23,7 @@ export class MessageServiceClient {
 
   findMessagesForUserid(userId)
   {
-    const url = 'http://localhost:4000/api/user/'+userId+'/message';
+    const url = ' https://boston-marketplace-server.herokuapp.com/api/user/'+userId+'/message';
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
@@ -31,7 +31,7 @@ export class MessageServiceClient {
 
   deleteMessage(messageId)
   {
-    return fetch('http://localhost:4000/api/delmsg/'+messageId, {
+    return fetch(' https://boston-marketplace-server.herokuapp.com/api/delmsg/'+messageId, {
       method: "DELETE",
       credentials: 'include', // include, same-origin, *omit
       headers: {

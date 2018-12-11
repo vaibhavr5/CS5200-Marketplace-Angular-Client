@@ -11,7 +11,7 @@ export class PostAdServiceClient {
   }
 
   updateAd(updatead) {
-    return fetch('http://localhost:4000/api/update-ad', {
+    return fetch('https://boston-marketplace-server.herokuapp.com/api/update-ad', {
       method: "PUT",
       body: JSON.stringify(updatead),
       credentials: 'include', // include, same-origin, *omit
@@ -24,7 +24,7 @@ export class PostAdServiceClient {
   scrape_details(about)
   {
     const req={about};
-    return fetch('http://localhost:4000/api/scrape', {
+    return fetch('https://boston-marketplace-server.herokuapp.com/api/scrape', {
       method: 'post',
       body: JSON.stringify(req),
       credentials: 'include',
@@ -37,7 +37,7 @@ export class PostAdServiceClient {
   findAdsForUser()
   {
     console.log("In service to server");
-    const url = 'http://localhost:4000/api/acd';
+    const url = 'https://boston-marketplace-server.herokuapp.com/api/acd';
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
@@ -47,7 +47,7 @@ export class PostAdServiceClient {
 
   findAdsForUserid(userId)
   {
-    const url = 'http://localhost:4000/api/user/'+userId+'/content';
+    const url = 'https://boston-marketplace-server.herokuapp.com/api/user/'+userId+'/content';
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
@@ -55,7 +55,7 @@ export class PostAdServiceClient {
 
   deleteAd(adId)
   {
-    return fetch('http://localhost:4000/api/delad/'+adId, {
+    return fetch('https://boston-marketplace-server.herokuapp.com/api/delad/'+adId, {
       method: "DELETE",
       credentials: 'include', // include, same-origin, *omit
       headers: {
@@ -66,7 +66,7 @@ export class PostAdServiceClient {
 
   findAdsByCategory(category)
   {
-    const url = 'http://localhost:4000/api/adscat/'+category;
+    const url = 'https://boston-marketplace-server.herokuapp.com/api/adscat/'+category;
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
@@ -75,7 +75,7 @@ export class PostAdServiceClient {
 
   getAd(adId)
   {
-    const url = 'http://localhost:4000/api/myad/'+adId;
+    const url = 'https://boston-marketplace-server.herokuapp.com/api/myad/'+adId;
     return fetch(url, {
       credentials: 'include'
     }).then(response => response.json());
