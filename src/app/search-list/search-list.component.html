@@ -262,7 +262,7 @@
 <div class="card-header">
   <h3>Ad Search Results</h3>
 </div>
-  
+
 
   <ul class="list-group">
 
@@ -274,7 +274,7 @@
     </li>
     <li *ngFor="let se of localsearchList"
         class="list-group-item">
-      <img src="http://localhost:4000{{se.image[0]}}" width="150px height=150px"> &nbsp; &nbsp;&nbsp; &nbsp;
+      <img src="https://boston-marketplace-server.herokuapp.com{{se.image[0]}}" width="150px height=150px"> &nbsp; &nbsp;&nbsp; &nbsp;
 
       <a style="font-family: Trebuchet MS" routerLink="/my-ad/{{se._id}}" [innerHTML]="se.title"> </a>
     </li>
