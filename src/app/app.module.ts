@@ -57,7 +57,7 @@ export function provideConfig() {
     ResultSectionComponent,
     AdminComponent,
     PostAdComponent,
-    FileUploadTestComponent,
+    // FileUploadTestComponent,
     FileSelectDirective,
     AdDetailsComponent,
     MyAdsComponent,
