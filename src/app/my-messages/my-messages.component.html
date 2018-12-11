@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="card">
+    <h2 class="card-header">My Messages</h2>
+    <div class="card-body">
+      <div class="row">
+        <div *ngFor="let posted of messages" class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="card-title">{{posted.username}} </h3>
+              <h5 class="card-body">{{posted.message}}</h5>
+
+              <br><br>
+              <div class="col-3">
+                <button (click)="deleteMessage(posted._id)"
+                        class="btn btn-danger">Delete Message</button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <br>
+      <div style="text-align: center">
+        <a class="btn btn-lg btn-dark margin" routerLink="/home"><i class="fas fa-home"></i>&nbsp;Home</a>
+      </div>
+    </div>
+  </div>
+</div>
